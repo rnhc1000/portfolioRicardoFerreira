@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /cv/ResumeCVRev2022D.pdf
+Disallow: /cv/
