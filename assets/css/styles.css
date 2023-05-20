@@ -119,7 +119,6 @@ p {
     font-weight: 300;
     text-align: center;
     color: linen;
-
 }
 
 ul {
@@ -127,9 +126,8 @@ ul {
     font-weight: 300;
     text-align: center;
     color: var(--main-orange);
-    list-style-type: circle;
+    list-style-type: none;
 }
-
 
 hr {
     background-color: rgb(235, 182, 83);
@@ -138,6 +136,14 @@ hr {
     border: none;
 }
 
+li:hover {
+    cursor: crosshair;
+    transform: translateY(8px);
+    font-weight: 800;
+    transition: transform 0.5s ease-in-out;
+    color: var(--orangered);
+
+}
 
 a {
     text-decoration: none;
@@ -166,8 +172,6 @@ body {
     background-size: cover;
 }
 
-
-/* nav */
 nav {
     display: flex;
     justify-content: flex-end;
@@ -331,7 +335,7 @@ nav {
     overflow: hidden;
     width: 100%;
     height: 0;
-    transition: .5s ease;
+    transition: .5s ease-in-out;
 }
 
 .project:hover .overlay {
@@ -387,22 +391,24 @@ nav {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    text-align: center;
     width: 100%;
     height: 100vh;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: italic;
+    color:linen;
     background: linear-gradient(115deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
-    /*
-        background-color: var(--main-gray);
-        */
     z-index: -1;
-    margin: 0 auto;
+    margin: auto auto;
 }
 
 
-.skills-section-header {
+/* .skills-section-header {
     width: 100%;
     margin: 0 auto 2rem auto;
     border-bottom: 0.2rem solid lightgray;
-}
+} */
 
 .skills {
     display: flex;
