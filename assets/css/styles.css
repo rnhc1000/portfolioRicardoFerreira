@@ -1,0 +1,565 @@
+/* Custom properties/variables  */
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+    --main-orange: #F57513;
+    --orangered: rgb(255, 69, 0);
+}
+
+/* Base reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    font-family: "Poppins", sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+* default document font size = 16px, 1rem = 16px, 100% = 16px
+* (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+*/
+    font-size: 62.5%;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+* This helps automate a bit of responsiveness.
+* The trick is to use the rem unit for size values, margin and padding.
+* Because rem is relative to the document font size
+* when we scale up or down the font size on the document
+* it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+* The calculation is the following
+* screen size divided by browser base font size
+* As an example: a breakpoint at 980px
+* 980px / 16px = 61.25em
+*/
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+    html {
+        font-size: 60%;
+    }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+    html {
+        font-size: 58%;
+    }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+    html {
+        font-size: 52%;
+    }
+}
+
+/* 400px / 16px = 25em */
+@media (max-width: 25em) {
+    html {
+        font-size: 45%;
+    }
+}
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--main-orange);
+}
+
+h1 {
+    font-size: 5rem;
+    font-style: italic;
+}
+
+h2 {
+    font-size: 4.0rem;
+    font-style: italic;
+
+}
+
+h3 {
+    font-size: 2.5rem;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 2.0rem;
+}
+
+h5 {
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: var(--main-orange);
+}
+
+ol,
+p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: linen;
+}
+
+ul {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    color: var(--main-orange);
+    list-style-type: none;
+}
+
+hr {
+    background-color: rgb(235, 182, 83);
+    height: 2px;
+    border-radius: 1px;
+    border: none;
+    margin: 0 auto;
+}
+
+li:hover {
+    cursor: crosshair;
+    transform: translateY(8px);
+    font-weight: 800;
+    transition: transform 0.5s ease-in-out;
+    color: var(--orangered);
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--orangered);
+}
+
+a:hover {
+    cursor: zoom-out;
+    transform: translateY(8px);
+    font-weight: 800;
+    transition: transform 0.5s ease-in-out;
+    color: var(--orangered)
+}
+
+img {
+    border-radius: 5px;
+    opacity: 0.25;
+}
+
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    color: linen;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 10;
+    border: none;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+    border: none;
+}
+
+@media (max-width: 28.75em) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+@media (max-width: 25em) {
+    nav {
+        justify-content: center;
+    }
+
+    .nav-list {
+        margin: 0 1rem;
+    }
+}
+
+.nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 2rem;
+    color: var(--orangered);
+    border: none;
+}
+
+.nav-list a:hover {
+    transform: translateY(8px);
+    font-weight: 800;
+    transition: transform 0.3s ease-out;
+}
+
+/* Welcome section */
+.waviy {
+    position: relative;
+    -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--main-orange);
+    font-family: "Poppins", sans-serif;
+
+  }
+  .waviy span {
+    position: relative;
+    display: inline-block;
+    animation: waviy 4s infinite;
+    animation-delay: calc(.1s * var(--i));
+    
+  }
+
+  .waviy span:hover {
+    transform: translateY(8px);
+    font-weight: 1000;
+    transition: transform 0.3s ease-out;
+
+  }
+
+  @keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+    height: 100vh;
+    background-color: transparent;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.welcome {
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    color: linen;
+    position: relative;
+    top: 5rem;
+    width: 90%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.first-paragraph::first-letter {
+    font-size: 4rem;
+    color: var(--orangered);
+    float: left;
+    margin-right: 0.25rem;
+}
+
+.rferreira {
+    color: var(--orangered)
+}
+
+/* Projects section */
+
+.projects-section {
+    text-align: center;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    background-size: cover;
+    position:relative;
+    
+}
+
+.projects-section-header {
+    max-width: 640px;
+    margin: auto auto;
+    border-bottom: 0.2rem solid lightgray;
+}
+
+@media (max-width: 28.75em) {
+    .projects-section-header {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 25em) {
+    .projects-section-header {
+        font-size: 3rem;
+    }
+}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    margin: 0 auto auto auto;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+
+}
+
+@media (max-width: 30.625em) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project {
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+    color: #ff7f50;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 5px;
+    background-color: rgba(1, 18, 22, 0.418);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease-in-out;
+}
+
+.project:hover .overlay {
+    height: 100%;
+}
+
+.project-image {
+    height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+}
+
+.project-image:hover .overlay {
+    height: 100%;
+}
+
+.project-title {
+    font-size: 2rem;
+    padding: 1rem 0.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+.btn-show-all {
+    font-size: 2rem;
+    background: var(--main-gray);
+    transition: transform 0.3s ease-out;
+}
+
+.btn-show-all:hover {
+    background: var(--main-red);
+}
+
+.btn-show-all:hover>i {
+    transform: translateX(2px);
+}
+
+.btn-show-all>i {
+    margin-left: 10px;
+    transform: translateX(0);
+    transition: transform 0.3s ease-out;
+}
+
+/* Skills section */
+
+.skills-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: italic;
+    color:linen;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    /* z-index: -1; */
+    margin: auto auto;
+}
+
+
+.skills-section-header {
+    width: 100%;
+    margin: 0 auto 2rem auto;
+    /* border-bottom: 0.2rem solid lightgray; */
+}
+
+.skills-section-header:hover {
+    cursor: pointer;
+    transform: translateX(8px);
+    font-weight: 800;
+    transition: transform 0.5s ease-in-out;
+    color: linen;
+
+}
+
+.skills {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    width: 100%;
+    /* height: 0vh; */
+    padding: 0;
+    margin: 0 auto;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    color: var(--orangered);
+}
+
+
+/* Contact section */
+
+.contacts-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 40vh;
+    padding: 0;
+    margin: 0 auto;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    color: var(--orangered);
+}
+
+.contacts-section-header>h2 {
+    font-size: 5rem;
+}
+
+@media (max-width: 28.75em) {
+    .contacts-section-header>h2 {
+        font-size: 4rem;
+    }
+}
+
+.contacts-section-header>p {
+    font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.contacts-links {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding: 0 0 1rem 0;
+}
+
+.contacts-details {
+    font-size: 2rem;
+    text-shadow: 2px 2px 1px #1f1f1f;
+    transition: transform 0.3s ease-out;
+}
+
+.contacts-details:hover {
+    transform: translateY(8px);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+/* Footer */
+
+footer {
+    font-weight: 800;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    border-top: 4px solid var(--orangered);
+    color: var(--orangered);
+    margin: 0 auto;
+}
+
+footer>p {
+    margin: 2rem;
+    text-align: center;
+    color: var(--orangered);
+    font-size: 1.75rem;
+
+}
+
+footer i {
+    vertical-align: middle;
+}
+
+.foot-img {
+	width: 25%;
+	height: auto
+}
