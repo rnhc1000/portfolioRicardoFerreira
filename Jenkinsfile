@@ -8,4 +8,8 @@ node {
 	    sh "${scannerHome}/bin/sonar-scanner"
     }
   }
+  stage('Quality Gate Analysis') {
+
+    waitForQualityGate abortPipeline: false, credentialsId: 'SonarTokenPortfolio'
+  }
 }
