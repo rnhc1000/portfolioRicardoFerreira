@@ -602,7 +602,8 @@
         justify-content: center;
         align-items: center;
         padding: 2rem;
-        background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+        background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), 
+        url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
         /*background: linear-gradient(90deg, rgba(14, 14, 14, 1) 0%, rgba(61, 46, 20, 1) 90%, url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;);*/
 
         border-top: 4px solid var(--orangered);
