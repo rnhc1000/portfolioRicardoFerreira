@@ -98,11 +98,11 @@
     </section>
     <hr />
 
-    <section id="project-section" class="projects-section">
+    <section id="project-section">
       <h3>Here are a few of my latest projects</h3>
       <h4>Give them a try.... Just click on each image below...</h4>
       <h5>As some of them are corporate apps, call me if you want to know details...</h5>
-      <div class="projects-session">
+      <div>
         <div class="projects-grid">
           <a href="https://sotech.com.br" target="_blank" class="project project-tile">
             <img class="project-image" src="assets/images/fluxoTEF-2022-TT.png" alt="project">
@@ -181,7 +181,7 @@
 
     <hr />
 
-    <section id="skill-section" class="skills-section">
+    <section id="skill-section">
       <div class="skills-section-header">
         <h3>Here are some of my key skills</h3>
       </div>
@@ -208,6 +208,14 @@
               <a href="cv/eCertificateFullStackUnyleya.pdf" target="_blank">
                 PGDip in Full Stack Web Development
               </a> by Unyleya University, DF, BR
+            </span>
+          </li>
+          <br>
+          <li>
+            <span>
+              <a href="https://www.scrumstudy.com/certification/verify?type=SFC&number=984118" target="_blank">
+                Scrums Foundations Certified
+              </a> by SCRUMstudy - Accreditation Body for Scrum and Agile
             </span>
           </li>
           <br>
@@ -329,7 +337,7 @@
 
     </section>
     <footer>
-      <span>&copy; 2023 - All Rights Reserved - Ricardo Ferreira<p id="time"></p></span>
+      <span>&copy; 2023 - All Rights Reserved - Ricardo Ferreira<p class="time" id="time"></p></span>
       <!-- <a href="https://dev.java"> <img class="foot-img"
           src="https://dev.java/assets/images/java-affinity-logo-icode-lg.png" alt="project" />
       </a> -->
@@ -346,6 +354,6 @@
 
     function ut() {
         var d = new Date();
-        document.getElementById("time").innerHTML = d.toLocaleTimeString();
+        document.getElementById("time").innerHTML = d.toLocaleTimeString('pt-BR');
     }
 </script>
