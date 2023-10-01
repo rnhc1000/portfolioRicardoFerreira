@@ -1,3 +1,4 @@
+@import  'stylex.css';
 /* Custom properties/variables  */
 :root {
     --main-white: #f0f0f0;
@@ -7,6 +8,7 @@
     --main-orange: #F57513;
     --orangered: rgb(255, 69, 0);
     --background-hr: rgb(235, 182, 83);
+    --text-linen: #faf0e6;
 }
 
 /* Base reset */
@@ -24,13 +26,21 @@
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(115deg, rgba(172, 154, 154, 0.8), rgba(0, 0, 0, 0.9)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    /* position: relative; */
+    /* background:  rgba(0, 0, 0, 0.9); */
     font-family: "Poppins", sans-serif;
-    background-repeat: no-repeat;
-    background-size: cover;
+    /* background-repeat: no-repeat; */
+    /* background: linear-gradient(115deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.9)), url(../images/light-bulbs-5488573_1280.webp); */
+    /* background: linear-gradient(115deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.9)), url(../images/lightbulb-1875247_1920.jpg); */
+    background: linear-gradient(115deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.9)), url(../images/cloud-computing-2001090_1920.jpg);
+    /* background: linear-gradient(115deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.9)), url(../images/scifi-4916165_1280.jpg); */
+
+    
+    /* background-size: contain; */
+    /* overflow-x: hidden; */
 }
 
 
@@ -112,6 +122,7 @@ h2 {
 h3 {
     font-size: 2.5rem;
     font-style: italic;
+    text-align: center;
 }
 
 h4 {
@@ -140,7 +151,7 @@ p {
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
     text-align: center;
-    color: linen;
+    color: var(--text-linen);
 }
 
 ul {
@@ -170,7 +181,7 @@ li:hover {
 
 a {
     text-decoration: none;
-    color: linen;
+    color: var(--text-linen);
 
 }
 
@@ -187,25 +198,42 @@ img {
     opacity: 0.25;
 }
 
-
-nav {
+.nav-container {
+    height: 80px;
+    width: 100vw;
+    background-color: none;
+    padding: 0 20px 0 20px;
     display: flex;
     justify-content: flex-end;
+    align-items: right;
+
+ }
+
+ .nav-main {
+ 
     position: fixed;
+ }
+
+
+/* nav {
+    display: flex;
+    justify-content: flex-end;
     top: 0;
     left: 0;
     width: 100%;
     background: transparent;
-    color: linen;
+    color: var(--text-linen);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
     z-index: 10;
     border: none;
-}
+} */
 
 .nav-list {
     display: flex;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     border: none;
+    /* align-items: center;
+    justify-content: space-between; */
 }
 
 @media (max-width: 28.75em) {
@@ -279,24 +307,32 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    align-items: left;
+    align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: transparent;
-    margin: 0 auto;
-    padding: 0;
+    max-width: 960px;
+    
+    /* background-color: transparent; */
+    /* background: linear-gradient(115deg, rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; */
+
+    margin: 2em auto 5em auto;
+
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--text-linen);
 }
 
 .welcome {
     font-size: 2rem;
     font-weight: 200;
     font-style: italic;
-    color: linen;
-    position: relative;
-    top: 5rem;
-    width: 90%;
-    height: 100vh;
-    margin: 0 auto;
+    color: var(--text-linen);
+    /* position: relative; */
+    /* top: 5rem; */
+    /* width: 90%; */
+    /* height: 100vh; */
+
 }
 
 .first-paragraph::first-letter {
@@ -314,16 +350,19 @@ nav {
 
 .projects-section {
     text-align: center;
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
-    background-size: cover;
-    position:relative;
+    display:flex;
+    flex-direction: column;
+    /* background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; */
+    /* background-size: cover; */
+    /* position:relative; */
     
 }
 
 .projects-section-header {
-    max-width: 640px;
-    margin: auto auto;
-    border-bottom: 0.2rem solid lightgray;
+    text-align: center;
+    /* max-width: 640px; */
+    margin: 5px 20px 5px 20px;
+    /* border-bottom: 0.2rem solid lightgray; */
 }
 
 @media (max-width: 28.75em) {
@@ -340,28 +379,34 @@ nav {
 
 /* "Automagic" image grid using no media queries */
 .projects-grid {
-    position: relative;
+    /* position: relative;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    grid-gap: 4rem;
-    width: 100%;
-    margin: 0 auto auto auto;
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* grid-gap: 4rem; */
+    width: 100vw;
+    height: 100vh;
+    margin: 10em auto 20px auto;
+
+   
+    /* background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; */
 
 }
 
-@media (max-width: 30.625em) {
+/* @media (max-width: 30.625em) {
 
     .projects-grid {
         grid-template-columns: 1fr;
     }
-}
-
+} */
+/* 
 .project {
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    /* background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; 
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     border-radius: 2px;
-}
+} */
 
 .code {
     color: var(--main-gray);
@@ -389,15 +434,16 @@ nav {
     height: 100%;
 }
 
-.project-image {
-    height: calc(100% - 6.8rem);
-    width: 100%;
+/* .project-image {
+    height: calc(100% - 10rem);
+    width: 100vw;
+    max-width: 960px;
     object-fit: cover;
-}
+} */
 
-.project-image:hover .overlay {
+/* .project-image:hover .overlay {
     height: 100%;
-}
+} */
 
 .project-title {
     font-size: 2rem;
@@ -433,28 +479,46 @@ nav {
 /* Skills section */
 
 .skills-section {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 100vw;
+    max-width: 960px;
     height: 100vh;
     font-size: 1.75rem;
     font-weight: 400;
     font-style: italic;
-    color:linen;
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    /* color:var(--text-linen); */
+    /* background: linear-gradient(115deg, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; */
     /* z-index: -1; */
-    margin: auto auto;
+    margin: 5em auto 5em auto;
 }
 
 
+
+
+.skills {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    width: 100vw;
+    /* height: 0vh; */
+    padding: 0;
+    /* margin: 0 auto; */
+    /* color: var(--text-linen); */
+
+}
 .skills-section-header {
-    width: 100%;
-    margin: 0 auto 2rem auto;
-    /* border-bottom: 0.2rem solid lightgray; */
+
+    align-items: center;
+    /* padding: 10px;
+    border-bottom: 0.2rem solid var(--orangered);  */
 }
 
 .skills-section-header:hover {
@@ -462,26 +526,9 @@ nav {
     transform: translateX(8px);
     font-weight: 800;
     transition: transform 0.5s ease-in-out;
-    color: linen;
+    color: var(--text-linen);
 
 }
-
-.skills {
-    display: flex;
-    box-sizing: border-box;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    text-align: center;
-    width: 100%;
-    /* height: 0vh; */
-    padding: 0;
-    margin: 0 auto;
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
-    color: linen;
-
-}
-
 
 /* Contact section */
 
@@ -493,9 +540,11 @@ nav {
     text-align: center;
     width: 100%;
     height: 40vh;
+    max-width: 960px;
+
     padding: 0;
-    margin: 0 auto;
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    margin: 5rem auto;
+    /* background: linear-gradient(115deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; */
     color: var(--orangered);
 }
 
@@ -504,12 +553,12 @@ nav {
 }
 
 @media (max-width: 28.75em) {
-    .contacts-section-header>h2 {
+    .contacts-section-header h2 {
         font-size: 4rem;
     }
 }
 
-.contacts-section-header>p {
+.contacts-section-header p {
     font-style: italic;
     font-size: 1.25rem;
     font-weight: 500;
@@ -540,6 +589,7 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    
 
 }
 
@@ -547,16 +597,17 @@ nav {
 /* Footer */
 
 footer {
-    font-weight: 800;
+    font-weight: 600;
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat;
+    /* background: linear-gradient(115deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(https://cdn.pixabay.com/photo/2016/03/27/19/50/light-1283987_960_720.jpg), no-repeat; */
     border-top: 4px solid var(--orangered);
     color: var(--orangered);
     margin: 0 auto;
+    font-size: 1.5rem;  
 }
 
 .time  {
