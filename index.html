@@ -28,22 +28,18 @@
 
 <body>
   <main>
-    <nav id="navbar">
+    <header class="nav-container">
+    <nav id="navbar" class="nav-main">
       <ul class="nav-list">
-        <li><a href="#welcome-section">Welcome</a></li>
+        <li><a href="#welcome-section">Home</a></li>
         <li><a href="#project-section">Projects</a></li>
         <li><a href="#skill-section">Skills</a></li>
         <li><a href="#contact-section">Contact</a></li>
       </ul>
     </nav>
+  </header>
     <section id="welcome-section" class="welcome-section">
-      <div class="welcome">
-        <h3>Welcome!!!</h3>
-        <br />
-
-        <hr />
-        <br />
-
+      <div class = "welcome">
         <p>Hi everyone! I am called
           <a href="https://www.ferreiras.dev.br/cv/ResumeRicardoFerreira.pdf" target="_blank" class="contact-details"
           target="_blank"><span class="waviy">
@@ -72,17 +68,24 @@
           SonarQube, Selenium working fulltime as a Sr Software Engineer for a digital payments services provider for the past years
           doing ...
         </p>
+        <br>
         <ul>
-          <li>Software Engineering</li>
-          <li>Systems Architecture</li>
-          <li>Object-Oriented Programming</li>
-          <li>Hands-on Coding Apps</li>
-          <li>Constant Integration and Delivery</li>
-          <li>Supporting Applications Lifecycle</li>
+          <li>Software Engineering,</li>
+          <li>Systems Architecture,</li>
+          <li>Object-Oriented Programming,</li>
+          <li>Hands-on Coding Apps,</li>
+          <li>CI/CD and DevOps Management,</li>
+          <li>Supporting Applications Lifecycle,</li>
           <li>Writing Clean Code using Design Patterns as SOLID, MVC, etc</li>
-          <li>Providing support to DevOps and Tech Support teams</li>
+          <li>Providing support to DevOps and Tech Support teams,</li>
+          <li>Extensive knowledge of CSS, HTML, Javascript and ReactJS for front-end,</li>
+          <li>Extensive knowledge if Linux, MySQL, PHP, Java, PostgreSQL for the backend</li>
+          <li>Extensive knowledge of IntelliJ and VSCode</li>
+          <li>Cloud Architect Certified for OCI, Oracle Cloud</li>
+          <li>Scrum Foundations Certified</li>
         </ul>
         <p>
+          <br>
           If you want to go down to the nitty-gritty of my
           challenging career as
           a solutions developer drop me a quick message,
@@ -93,97 +96,123 @@
               Resume...
             </span></a>
         </p>
-        <br>
       </div>
     </section>
-    <hr />
-
-    <section id="project-section">
+  
+    <section id="project-section" class="projects-section-header">
       <h3>Here are a few of my latest projects</h3>
       <h4>Give them a try.... Just click on each image below...</h4>
       <h5>As some of them are corporate apps, call me if you want to know details...</h5>
-      <div>
-        <div class="projects-grid">
-          <a href="https://sotech.com.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/fluxoTEF-2022-TT.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              &copy;simaTEF
-              <span class="code">/&gt;</span>
-            </p>
-          </a> <a href="https://dashboard.simatef.com.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/dashboard.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              Financial OPs
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://easypay.simatef.com.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/easypayBackEnd.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              &copy;easyPAY backEnd
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://easypag.simatef.com.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/easypayFrontEnd.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              &copy;easyPAY frontEnd
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://alerta.simatef.com.br/nagios" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/devOps.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              devOps
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://github.com/rnhc1000" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/springBoot.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              code
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://mapadeclientes.simatef.com.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/mapa.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              GeoIP - Merchants
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://zabbix.enormity.com.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/zbx.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              devOPs
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-          <a href="https://notas.ferreiras.dev.br" target="_blank" class="project project-tile">
-            <img class="project-image" src="assets/images/tributo.png" alt="project">
-            <p class="project-title">
-              <span class="code">&lt;</span>
-              tribute
-              <span class="code">/&gt;</span>
-            </p>
-          </a>
-        </div>
+      <br>
+
+      <div class="wrapper">
+          <nav class="lil-nav">
+              <a href="#imageOne">
+                  <img class="lil-nav__img" src="assets/images/fluxoTEF-2022-TT.png" alt="project">
+              </a>
+              <a href="#imageTwo">
+                  <img class="lil-nav__img" src="assets/images/dashboard.png" alt="project">
+              </a>
+              <a href="#imageThree">
+                  <img class="lil-nav__img" src="assets/images/easypayBackEnd.png" alt="project">
+              </a>
+              <a href="#imageFour">
+                  <img class="lil-nav__img" src="assets/images/easypayFrontEnd.png" alt="project">
+              </a>
+              <a href="#imageFive">
+                  <img class="lil-nav__img" src="assets/images/devOps.png" alt="project">
+              </a>
+              <a href="#imageSix">
+                  <img class="lil-nav__img" src="assets/images/springBoot.png" alt="project">
+              </a>
+              <a href="#imageSeven">
+                  <img class="lil-nav__img" src="assets/images/mapa.png" alt="project">
+              </a>
+              <a href="#imageEight">
+                  <img class="lil-nav__img" src="assets/images/zbx.png" alt="project">
+              </a>
+              <a href="#imageNine">
+                  <img class="lil-nav__img" src="assets/images/tributo.png" alt="project">
+              </a>
+          </nav>
+          <div class="gallery">
+              <a href="https://sotech.com.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x" id="imageOne" src="assets/images/fluxoTEF-2022-TT.png" alt="project">
+
+              </a> <a href="https://dashboard.simatef.com.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x" id="imageTwo" src="assets/images/dashboard.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      Financial OPs
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://easypay.simatef.com.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x" id="imageThree" src="assets/images/easypayBackEnd.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      &copy;easyPAY backEnd
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://easypag.simatef.com.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x"  id="imageFour" src="assets/images/easypayFrontEnd.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      &copy;easyPAY frontEnd
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://alerta.simatef.com.br/nagios" target="_blank" class="project project-title">
+                  <img class="gallery__img_x"  id="imageFive" src="assets/images/devOps.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      devOps
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://github.com/rnhc1000" target="_blank" class="project project-title">
+                  <img class="gallery__img_x" id="imageSix" src="assets/images/springBoot.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      code
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://mapadeclientes.simatef.com.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x"  id="imageSeven" src="assets/images/mapa.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      GeoIP - Merchants
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://zabbix.enormity.com.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x"  id="imageEight" src="assets/images/zbx.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      devOPs
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+              <a href="https://notas.ferreiras.dev.br" target="_blank" class="project project-title">
+                  <img class="gallery__img_x" id="imageNine" src="assets/images/tributo.png" alt="project">
+                  <p class="project-title">
+                      <span class="code">&lt;</span>
+                      tribute
+                      <span class="code">/&gt;</span>
+                  </p>
+              </a>
+          </div>
       </div>
-    </section>
+  </section>
 
     <hr />
 
-    <section id="skill-section">
+    <section id="skill-section" class="skills-section">
       <div class="skills-section-header">
         <h3>Here are some of my key skills</h3>
+        <br>
       </div>
       <div class="skills">
         <ul>
@@ -298,7 +327,7 @@
       </div>
     </section>
 
-    <hr />
+    <br>
     
     <section id="contact-section" class="contacts-section">
       <div class="contacts-section-header">
