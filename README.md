@@ -32,7 +32,7 @@ The design is structured as shown:
 - index.html
 
 ## _Screenshot_
-[![](./ferreiras.png)](https://ferreiras.dev.br)
+[![](./portfolio.png)](https://ferreiras.dev.br)
 ## _Links_
 - Live Site URL: [https://ferreiras.dev.br] 
 ## _Built with_
@@ -42,23 +42,44 @@ The design is structured as shown:
 
 ## _How I did it_
 ```html
-<div class="form-control">
-    <label for="number">Número</label>
-    <input type="text" name="number" id="number" class="form-input" placeholder="Número">
-    <div class="error-message" data-error="number"></div>
-</div>
+    <section id="welcome-section" class="welcome-section">
+      <div>
+        <p>Hi everyone! I am called
+        <a href="https://www.ferreiras.dev.br/cv/ResumeRicardoFerreira.pdf" class="contact-details" target="_blank" >
+          <span class="waviy">
+              <span style="--i:1">R</span>
+              <span style="--i:2">i</span>
+              <span style="--i:3">c</span>
+              <span style="--i:4">a</span>
+              <span style="--i:5">r</span>
+              <span style="--i:6">d</span>
+              <span style="--i:7">o</span>
+              <span style="--i:8"></span>
+              <span style="--i:9">F</span>
+              <span style="--i:10">e</span>
+              <span style="--i:11">r</span>
+              <span style="--i:12">r</span>
+              <span style="--i:13">e</span>
+              <span style="--i:14">i</span>
+              <span style="--i:15">r</span>
+              <span style="--i:16">a</span>
+          </span></a>
+      </div>
 ``` 
 ```css
- :root {
-    --main-white: #f0f0f0;
-    --main-red: #be3144;
-    --main-blue: #45567d;
-    --main-gray: #303841;
-    --main-orange: #FF8400;
-    --main-card: #3d3d3d;
-    --orangered: rgb(255, 69, 0);
-    --background-hr: #ebb653;
-    --error-message: #faa;
+.gallery {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  display: flex;
+
+  @media screen and (min-width: 960px) {
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-snap-type: y mandatory;
+  }
 }
 ``` 
 ## _Author_
