@@ -1,0 +1,33 @@
+/* Skills section */
+
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
+    font-size: 1.75rem;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0 auto;
+}
+
+.skills {
+    width: 100%;
+    max-width: 960px;
+    padding: 0;
+}
+
+.skills-section-header {
+    align-items: center;
+}
+
+.skills-section-header:hover {
+    cursor: pointer;
+    transform: translateX(8px);
+    font-weight: 800;
+    transition: transform 0.5s ease-in-out;
+    color: var(--text-linen);
+}
